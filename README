@@ -1,0 +1,84 @@
+# House Price Prediction Web App 🏠
+
+## Description
+A machine learning web application built with Flask that predicts house prices in California based on various housing metrics.
+
+## Features
+- User-friendly web interface
+- Real-time price predictions
+- Input validation for 8 key housing metrics:
+  - MedInc (Median Income)
+  - HouseAge
+  - AveRooms
+  - AveBedrms
+  - Population
+  - AveOccup
+  - Latitude
+  - Longitude
+
+## Project Structure
+```
+price_house_prediction/
+├── app/
+│   ├── app.py
+│   └── templates/
+│       └── index.html
+└── model/
+    ├── model.pkl
+    ├── names_features.pkl
+    └── price_prediction.ipynb
+```
+
+## Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/price_house_prediction.git
+cd price_house_prediction
+```
+
+2. Install required packages
+```bash
+pip install flask numpy scikit-learn pickle-mixin
+```
+
+## Usage
+
+1. Start the Flask server:
+```bash
+python app/app.py
+```
+
+2. Open your web browser and navigate to `http://localhost:5000`
+3. Enter the required housing metrics
+4. Click "Prédire" to get the prediction
+
+## Technical Stack
+- **Backend**: Flask (Python)
+- **ML Framework**: Scikit-learn
+- **Data Processing**: NumPy
+- **Frontend**: HTML with Jinja2 templating
+- **Dataset**: California Housing dataset (20,640 entries)
+
+## Files Description
+- `app/app.py`: Main Flask application
+- `app/templates/index.html`: Frontend template
+- `model/price_prediction.ipynb`: Jupyter notebook for model training
+- `model/model.pkl`: Trained machine learning model
+- `model/names_features.pkl`: Feature names for prediction
+
+## Requirements
+- Python 3.7+
+- Flask
+- NumPy
+- Scikit-learn
+- Pickle
+
+## Note
+Ensure both `model.pkl` and `names_features.pkl` are present in the model directory before running the application.
+
+## License
+MIT
+
+## Author
+[Your Name]

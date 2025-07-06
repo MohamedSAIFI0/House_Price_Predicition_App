@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Prédiction Prix Maison</title>
+</head>
+<body>
+  <h1>🏠 Prédiction de Prix de Maison</h1>
+
+  <form method="POST">
+    {% for feature in features %}
+      <label>{{ feature }}:</label><br>
+      <input type="text" name="{{ feature }}" required><br><br>
+    {% endfor %}
+    <input type="submit" value="Prédire">
+  </form>
+
+  {% if prediction is not none %}
+    <h2>🔍 Prix estimé : {{ prediction | round(2) }} (en centaines de milliers $)</h2>
+  {% endif %}
+</body>
+</html>
